@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+require('dotenv').config();
 const client = new Discord.Client();
 
 const prefix = 'BOT_PREFIX'
@@ -41,5 +42,4 @@ client.on('message', message =>{
     } 
 });
  
-client.login("YOUR_BOT_TOKEN");
- 
+client.login(process.env.DISCORD_TOKEN);
