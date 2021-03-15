@@ -1,8 +1,8 @@
 module.exports = async (client) =>{
-    const guild = client.guilds.cache.get('820163683538829333');
+    const guild = client.guilds.cache.get('SERVER_ID');
     setInterval(() =>{
         const memberCount = guild.memberCount;
-        const channel = guild.channels.cache.get('820908562645123102');
+        const channel = guild.channels.cache.get('VOICE_CHANNEL_ID');
         channel.setName(`Total Members: ${memberCount.toLocaleString()}`);
         console.log('Counting and changing...');
     }, 1000);
