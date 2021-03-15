@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const prefix = '/'
+const prefix = 'BOT_PREFIX'
  
 const fs = require('fs');
 
@@ -19,15 +19,15 @@ for(const file of commandFiles){
  
 client.once('ready', () => {
     console.log('Server Welcome is online!');
-    client.user.setPresence({ activity: { name: "member-counter.js" }, status: "online"})
+    client.user.setPresence({ activity: { name: "GAME_STATUS" }, status: "YOUR_STATUS"})
     memberCounter(client);
 });
 
 client.on('guildMemberAdd', guildMember =>{
-   let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'UnVerified');
+   let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'UNVERIFIED_ROLE');
 
     guildMember.roles.add(welcomeRole);
-    guildMember.guild.channels.cache.get('807784420126752768').send(`Welcome to Phenix H's official Discord server <@${guildMember.user.id}>! Make sure to check out the rules channel!`)
+    guildMember.guild.channels.cache.get('WELCOME_CHANNEL_ID').send(`YOUR_WELCOME_MESSAGE`)
 });
  
 client.on('message', message =>{
@@ -41,5 +41,5 @@ client.on('message', message =>{
     } 
 });
  
-client.login("");
+client.login("YOUR_BOT_TOKEN");
  
