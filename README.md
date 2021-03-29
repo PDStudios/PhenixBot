@@ -33,3 +33,6 @@ This is the source code for Phenix from PD Studios' official bot. Self-hosting i
 
 ## Adding token protection
 To protect your bot token, install dotenv(npm i dotenv) and copy the files from the tag, Protected Bot Token. Then replace PROTECTION_TOKEN in .env your bot token. It's really easy.
+
+## NOTE
+Please do not copy this GitHub repository. I do not like people copying my repositories and faking that they own it. If you want to upload the link to a video, always use this repository link. Thank you.
